@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<#setting locale="ru_RU">
 <#setting date_format="dd-MM-yyyy HH:mm:ss">
+
 <head>
     <meta charset="UTF-8">
     <title>Update product</title>
@@ -17,8 +20,8 @@
 
     <!-- Sending wrong data in format "MM/dd/yyyy HH:mm:ss"/-->
     <p>Adding date: ${product.dateAdd?string("dd-MM-yyyy HH:mm:ss")}</p>
+    <p>${product.dateAdd}</p>
     <input type="text" name="dateAdd" value="${product.dateAdd?string("dd/MM/yyyy HH:mm:ss")}">
-
 
     <p>Date of last update: ${product.dateUpdate?string("dd-MM-yyyy HH:mm:ss")}</p>
     <input type="text" name="dateUpdate" value="${product.dateUpdate?string("dd/MM/yyyy HH:mm:ss")}">
